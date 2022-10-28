@@ -1,0 +1,19 @@
+ul.posteditinfo {
+    border-top: 1px solid #dcdcdc;
+    padding: 0;
+    margin: 0;
+    font-size: small;
+    color: #8F8F8F;
+    list-style-type: none;
+}
+ul.posteditinfo li {
+    display: inline-block;
+}
+ul.posteditinfo li:first-child:before {
+    display: none;
+}
+ul.posteditinfo li:not(:last-child) {
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: 1px solid #dcdcdc;
+}
