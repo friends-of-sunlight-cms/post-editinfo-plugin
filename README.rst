@@ -30,6 +30,7 @@ Features
 - adds editing information after the content of the post.
 - distinguishes between editing by the author and by another user.
 - counts the total number of edits
+- add comparison of original and submitted text (no changes - don't save)
 
 Extend events
 =============
