@@ -17,7 +17,7 @@ class PostEditInfoPlugin extends ExtendPlugin
 
     public function onPostsColumns(array $args): void
     {
-        $args['output'] .= ',edited_at,edit_count,moderated_at,moderated_by';
+        $args['output'] .= ',p.edited_at,p.edit_count,p.moderated_at,p.moderated_by';
     }
 
     public function onPostsPost(array $args): void
@@ -82,8 +82,10 @@ class PostEditInfoPlugin extends ExtendPlugin
 
     public function onPostEdit(array $args): void
     {
-        // TODO: add comparison of original and submitted text,
-        // TODO: requires https://github.com/sunlight-cms/sunlight-cms/pull/89
+        // comparison of the original text and the sent text
+        if (strcmp($args['text'], $args['post']['text']) === 0) {
+            return; // no changes - don't save
+        }
 
         if ($args['post']['author'] != User::getId()) {
             $changeset = [
@@ -97,7 +99,7 @@ class PostEditInfoPlugin extends ExtendPlugin
         }
         // increase edit counter
         $changeset['edit_count'] = DB::raw('edit_count+1');
-
+        
         DB::update('post', 'id=' . DB::val($args['id']), $changeset);
     }
 }
