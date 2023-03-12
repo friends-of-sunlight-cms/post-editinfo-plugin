@@ -7,12 +7,12 @@ return new class extends PluginInstaller {
 
     protected function doInstall(): void
     {
-        $this->loadSqlDump(__DIR__ . '/Resources/db/install.sql');
+        $this->loadSqlDump(__DIR__ . '/install.sql');
     }
 
     protected function doUninstall(): void
     {
-        $this->loadSqlDump(__DIR__ . '/Resources/db/uninstall.sql');
+        $this->loadSqlDump(__DIR__ . '/uninstall.sql');
     }
 
     protected function verify(): bool

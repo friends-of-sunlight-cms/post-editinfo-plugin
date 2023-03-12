@@ -9,7 +9,7 @@
     "url": "https://github.com/friends-of-sunlight-cms/",
     "author": "Friends of Sunlight CMS",
     "class": "PostEditInfoPlugin",
-    "installer": "installer.php",
+    "installer": "resources/db/installer.php",
     "langs": {
         "posteditinfo": "lang"
     },
