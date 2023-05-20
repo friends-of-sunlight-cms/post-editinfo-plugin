@@ -12,7 +12,7 @@ class PostEditInfoPlugin extends ExtendPlugin
 {
     public function onHead(array $args): void
     {
-        $args['css'][] = $this->getWebPath() . '/resources/css/posteditinfo.css';
+        $args['css'][] = $this->getWebPath() . '/public/css/posteditinfo.css';
     }
 
     public function onPostsColumns(array $args): void
