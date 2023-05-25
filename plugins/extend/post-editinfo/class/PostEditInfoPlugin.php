@@ -34,7 +34,7 @@ class PostEditInfoPlugin extends ExtendPlugin
         ];
 
         // event
-        $output = Extend::buffer('plugin.posteditinfo.before', [
+        $output = Extend::buffer('post-editinfo.before', [
             'item' => $args['item'],
             'info' => &$info,
         ]);
@@ -70,7 +70,7 @@ class PostEditInfoPlugin extends ExtendPlugin
         }
 
         // event
-        $output .= Extend::buffer('plugin.posteditinfo.after', [
+        $output .= Extend::buffer('post-editinfo.after', [
             'item' => $args['item'],
             'info' => $info,
             'output' => &$output,
