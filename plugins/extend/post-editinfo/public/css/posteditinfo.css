@@ -6,12 +6,15 @@ ul.posteditinfo {
     color: #8F8F8F;
     list-style-type: none;
 }
+
 ul.posteditinfo li {
     display: inline-block;
 }
+
 ul.posteditinfo li:first-child:before {
     display: none;
 }
+
 ul.posteditinfo li:not(:last-child) {
     margin-right: 5px;
     padding-right: 5px;

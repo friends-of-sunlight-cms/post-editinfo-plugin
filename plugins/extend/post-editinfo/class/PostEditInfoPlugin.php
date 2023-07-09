@@ -12,7 +12,7 @@ class PostEditInfoPlugin extends ExtendPlugin
 {
     public function onHead(array $args): void
     {
-        $args['css'][] = $this->getWebPath() . '/public/css/posteditinfo.css';
+        $args['css'][] = $this->getAssetPath('public/css/posteditinfo.css');
     }
 
     public function onPostsColumns(array $args): void
@@ -99,7 +99,7 @@ class PostEditInfoPlugin extends ExtendPlugin
         }
         // increase edit counter
         $changeset['edit_count'] = DB::raw('edit_count+1');
-        
+
         DB::update('post', 'id=' . DB::val($args['id']), $changeset);
     }
 }
