@@ -1,26 +1,26 @@
 {
-  "$schema": "../../../system/schema/extend.json",
-  "name": "Post Edit Info",
-  "description": "Information about editing a post",
-  "version": "0.9.2",
-  "environment": {
-    "system": "^8.0"
-  },
-  "authors": [
-    {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms/"}
-  ],
-  "class": "PostEditInfoPlugin",
-  "installer": "resources/db/installer.php",
-  "langs": {
-    "posteditinfo": "lang"
-  },
-  "events": [
-    {"event": "posts.columns", "method": "onPostsColumns"},
-    {"event": "posts.post", "method": "onPostsPost"},
-    {"event": "mod.editpost.edit", "method": "onPostEdit"}
-  ],
-  "events.web": [
-    {"event": "tpl.head", "method": "onHead"}
-  ],
-  "events.admin": []
+    "$schema": "../../../system/schema/extend.json",
+    "name": "Post Edit Info",
+    "description": "Information about editing a post",
+    "version": "0.9.2",
+    "environment": {
+        "system": "^8.0"
+    },
+    "authors": [
+        {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms/"}
+    ],
+    "class": "PostEditInfoPlugin",
+    "installer": "resources/db/installer.php",
+    "langs": {
+        "posteditinfo": "lang"
+    },
+    "events": [
+        {"event": "posts.columns", "method": "onPostsColumns"},
+        {"event": "posts.post", "method": "onPostsPost"},
+        {"event": "mod.editpost.edit", "method": "onPostEdit"}
+    ],
+    "events.web": [
+        {"event": "tpl.head", "method": "onHead"}
+    ],
+    "events.admin": []
 }
