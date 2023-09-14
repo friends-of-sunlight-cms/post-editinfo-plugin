@@ -9,7 +9,7 @@
     "environment": {
         "system": "^8.0"
     },
-    "installer": "resources/db/installer.php",
+    "installer": "script/db/installer.php",
     "langs": {
         "posteditinfo": "lang"
     },
