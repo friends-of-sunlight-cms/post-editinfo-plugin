@@ -35,7 +35,7 @@ Features
 Extend events
 =============
 
-``plugin.posteditinfo.before``
+``post-editinfo.before``
 ------------------------------
 
 Called before compiling post editing information.
@@ -46,7 +46,7 @@ Arguments:
 - ``info`` - references to an associative array with information about editing the post (modifiable)
 - ``output`` - value to be rendered into the post (modifiable)
 
-``plugin.posteditinfo.after``
+``post-editinfo.after``
 -----------------------------
 
 Called before compiling post editing information.
